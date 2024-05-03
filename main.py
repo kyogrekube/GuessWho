@@ -55,7 +55,9 @@ def generateImages(player1, player2, all_faces):
             break
         player1.faces_list.append(Face(i, img_directory))
         player2.faces_list.append(Face(i, img_directory))
-        all_faces[i.split(".")[0][:12]] = pygame.image.load(img_directory + "\\"+ i)
+        img_name = i.split(".")[0][:12]
+        img_name = img_name[0].upper() + img_name[1:].lower()
+        all_faces[img_name] = pygame.image.load(img_directory + "\\"+ i)
         action_counter = action_counter + 1
         #Adds animation to the loop to avoid the look of a frozen screen while images load in
         if action_counter == 1:
