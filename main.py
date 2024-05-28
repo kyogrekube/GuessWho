@@ -40,7 +40,7 @@ current_player = 0 #this is either 1 or 2 after being set
 
 #create screen
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
-pygame.display.set_caption("Fiji Guess Who")
+pygame.display.set_caption("Guess Who")
 
 #Generates images, creates faces, fills each player's face list, and associates secret faces
 def generateImages(player1, player2, all_faces):
@@ -83,8 +83,8 @@ def draw_backgrounds(current_player, toggle_names_condition, ask_condition, gues
 
     #Building menu
     top_menu = pygame.draw.rect(screen, black, [0, 0, WIDTH, 100], 0) #(top x, top y, bottom x, bottom y)
-    title_text = title_font.render("Fiji Guess Who", True, white)
-    screen.blit(title_text, (450, 20))
+    title_text = title_font.render("Guess Who", True, white)
+    screen.blit(title_text, (500, 20))
     bottom_menu = pygame.draw.rect(screen, black, [0, HEIGHT-100, WIDTH, 100], 0)
     #restart button
     if restart_button_change == True:
@@ -206,8 +206,8 @@ if __name__=="__main__":
         timer.tick(fps)
         screen.fill(white)
         black_screen=pygame.draw.rect(screen, black, [0, 0, WIDTH, HEIGHT], 0) 
-        title_text = title_font.render("Fiji Guess Who", True, white)
-        screen.blit(title_text, (450, 20))
+        title_text = title_font.render("Guess Who", True, white)
+        screen.blit(title_text, (500, 20))
         if (images_loaded == False):
             generateImages(player1, player2, all_faces)
             images_loaded = True
