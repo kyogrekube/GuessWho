@@ -121,10 +121,10 @@ def draw_backgrounds(current_player, toggle_names_condition, ask_condition, gues
         screen.blit(scaled_image, (270, 10))
     else:
         toggle_hidden_face_button = pygame.draw.rect(screen, gray, [30, 10, 195, 75], 0, 8)
-    title_text = small_font.render("Toggle Secret", True, white)
+    title_text = small_font.render("Mystery Card", True, white)
     screen.blit(title_text, (40, 20)) 
-    title_text = small_font.render("Face", True, white)
-    screen.blit(title_text, (100, 55))
+    title_text = small_font.render("of Opponent", True, white)
+    screen.blit(title_text, (45, 55))
     #quit button
     quit_button = pygame.draw.rect(screen, gray, [1135, 10, WIDTH-30-1135, 75], 0, 8)
     title_text = title_font.render("Quit", True, white)
